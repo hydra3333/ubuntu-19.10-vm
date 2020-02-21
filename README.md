@@ -9,7 +9,7 @@ Also note the need to issue a powershell command:
 
 ```Set-VM -VMName u19.10 -EnhancedSessionTransportType HvSocket```
 
-where "u19.10" is the name of the VM.
+where ```u19.10``` is the name of the VM.
 
 attribution:
 https://gist.github.com/sam0x17/440678617bfb0ccfc1a884eece1d76a4
