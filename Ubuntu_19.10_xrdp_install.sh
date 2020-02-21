@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 #
 # This script is for Ubuntu Budgie 19.10 to download and install XRDP+XORGXRDP via
 # source.
