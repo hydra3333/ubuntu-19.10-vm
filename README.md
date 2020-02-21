@@ -4,12 +4,12 @@ Install and configure ```xrdp``` in Ubuntu19.10 VM for use in HYPER-V in Win10Pr
 
 Run one of the .sh using ```sudo``` eg  
 ```
-curl https://raw.githubusercontent.com/hydra3333/ubuntu-19.10-vm/master/Ubuntu_19.10_xrdp_install.sh```
+curl https://raw.githubusercontent.com/hydra3333/ubuntu-19.10-vm/master/Ubuntu_19.10_xrdp_install.sh
 sudo ./Ubuntu_19.10_xrdp_install.sh
 ```
 or
 ```
-curl https://raw.githubusercontent.com/hydra3333/ubuntu-19.10-vm/master/Ubuntu_19.10_xrdp_install_min.sh```
+curl https://raw.githubusercontent.com/hydra3333/ubuntu-19.10-vm/master/Ubuntu_19.10_xrdp_install_min.sh
 sudo ./Ubuntu_19.10_xrdp_install.sh
 ```
 
