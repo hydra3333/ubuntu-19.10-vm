@@ -34,7 +34,7 @@ To connect to a file share on the PC to copy files back and forward, one could:
 ```
 sudo apt install cifs-utils
 mkdir ~/SharedFolder
-sudo mount.cifs //IP_of_PC/SHARED_FOLDERNAME> ~/SharedFolder -o user=windows_username
+sudo mount.cifs //IP_of_PC/SHARED_FOLDERNAME ~/SharedFolder -o user=windows_username
 ```
 
 
