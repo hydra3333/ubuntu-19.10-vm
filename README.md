@@ -2,7 +2,16 @@
 
 Install and configure ```xrdp``` in Ubuntu19.10 VM for use in HYPER-V in Win10Prox64.
 
-Run the .sh using ```sudo```
+Run one of the .sh using ```sudo```  
+```
+curl https://raw.githubusercontent.com/hydra3333/ubuntu-19.10-vm/master/Ubuntu_19.10_xrdp_install.sh```
+sudo ./Ubuntu_19.10_xrdp_install.sh
+```
+or
+```
+curl https://raw.githubusercontent.com/hydra3333/ubuntu-19.10-vm/master/Ubuntu_19.10_xrdp_install_min.sh```
+sudo ./Ubuntu_19.10_xrdp_install.sh
+```
 
 Hopefully cut'n'paste and the other win10 interoperability things will then work,
 provided we have enabled the VM settings by ticking the two "enhanced" settings.
