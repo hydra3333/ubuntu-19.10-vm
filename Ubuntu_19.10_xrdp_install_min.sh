@@ -54,9 +54,9 @@ EOF
 chmod a+x /etc/xrdp/startbudgie.sh
 fi
 
-#							  
-# use the script to setup the budgie session
-sed -i_orig -e 's/startwm/startbudgie/g' /etc/xrdp/sesman.ini
+# min : leave at default "startwm"
+## use the script to setup the budgie session
+#sed -i_orig -e 's/startwm/startbudgie/g' /etc/xrdp/sesman.ini
 
 # rename the redirected drives to 'shared-drives'
 sed -i -e 's/FuseMountName=thinclient_drives/FuseMountName=shared-drives/g' /etc/xrdp/sesman.ini
