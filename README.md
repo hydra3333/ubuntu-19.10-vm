@@ -7,7 +7,7 @@ provided we have enabled the VM settings by ticking the two "enhanced" settings.
 
 Also note the need to issue a powershell command:
 
-Set-VM -VMName u19.10 -EnhancedSessionTransportType HvSocket
+```Set-VM -VMName u19.10 -EnhancedSessionTransportType HvSocket```
 
 where "u19.10" is the name of the VM.
 
