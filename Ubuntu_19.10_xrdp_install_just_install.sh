@@ -43,20 +43,6 @@ sed -i_orig -e 's/crypt_level=high/crypt_level=none/g' /etc/xrdp/xrdp.ini
 # disable bitmap compression since its local its much faster
 sed -i_orig -e 's/bitmap_compression=true/bitmap_compression=false/g' /etc/xrdp/xrdp.ini
 
-# Add script to setup the budgie session properly
-#if [ ! -e /etc/xrdp/startbudgie.sh ]; then
-#cat >> /etc/xrdp/startbudgie.sh << EOF
-##!/bin/sh
-#export GNOME_SHELL_SESSION_MODE=budgie-desktop
-#export XDG_CURRENT_DESKTOP=Budgie:GNOME
-#exec /etc/xrdp/startwm.sh
-#EOF
-#chmod a+x /etc/xrdp/startbudgie.sh
-#fi
-
-# min : leave at default "startwm"
-## use the script to setup the budgie session
-#sed -i_orig -e 's/startwm/startbudgie/g' /etc/xrdp/sesman.ini
 
 # rename the redirected drives to 'shared-drives'
 sed -i -e 's/FuseMountName=thinclient_drives/FuseMountName=shared-drives/g' /etc/xrdp/sesman.ini
@@ -77,27 +63,27 @@ echo "hv_sock" > /etc/modules-load.d/hv_sock.conf
 fi
 
 # Configure the policy xrdp session # https://c-nergy.be/blog/?p=14051
-cat > /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla <<EOF
-[Allow Colord all Users]
-Identity=unix-user:*
-Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
-ResultAny=no
-ResultInactive=no
-ResultActive=yes
-EOF
+#cat > /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla <<EOF
+#[Allow Colord all Users]
+#Identity=unix-user:*
+#Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
 #ResultAny=no
 #ResultInactive=no
 #ResultActive=yes
+#EOF
+##ResultAny=no
+##ResultInactive=no
+##ResultActive=yes
 
 # Configure the policy xrdp session # https://c-nergy.be/blog/?p=14051
-cat > /etc/polkit-1/localauthority/50-local.d/46-allow-update-repo.pkla <<EOF
-[Allow Package Management all Users]
-Identity=unix-user:*
-Action=org.freedesktop.packagekit.system-sources-refresh
-ResultAny=yes
-ResultInactive=yes
-ResultActive=yes
-EOF
+#cat > /etc/polkit-1/localauthority/50-local.d/46-allow-update-repo.pkla <<EOF
+#[Allow Package Management all Users]
+#Identity=unix-user:*
+#Action=org.freedesktop.packagekit.system-sources-refresh
+#ResultAny=yes
+#ResultInactive=yes
+#ResultActive=yes
+#EOF
 
 # reconfigure the service
 systemctl daemon-reload
