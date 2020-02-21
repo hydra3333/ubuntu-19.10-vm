@@ -10,7 +10,7 @@ sudo ./Ubuntu_19.10_xrdp_install.sh
 or
 ```
 curl https://raw.githubusercontent.com/hydra3333/ubuntu-19.10-vm/master/Ubuntu_19.10_xrdp_install_min.sh
-sudo ./Ubuntu_19.10_xrdp_install.sh
+sudo ./Ubuntu_19.10_xrdp_install_min.sh
 ```
 
 Hopefully cut'n'paste and the other win10 interoperability things will then work,
