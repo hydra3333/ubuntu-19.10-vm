@@ -41,18 +41,18 @@ sed -i_orig -e 's/security_layer=negotiate/security_layer=rdp/g' /etc/xrdp/xrdp.
 # remove encryption validation.
 sed -i_orig -e 's/crypt_level=high/crypt_level=none/g' /etc/xrdp/xrdp.ini
 # disable bitmap compression since its local its much faster
-sed -i_orig -e 's/bitmap_compression=true/bitmap_compression=false/g' /etc/xrdp/xrdp.ini
+#sed -i_orig -e 's/bitmap_compression=true/bitmap_compression=false/g' /etc/xrdp/xrdp.ini
 
 # Add script to setup the budgie session properly
-if [ ! -e /etc/xrdp/startbudgie.sh ]; then
-cat >> /etc/xrdp/startbudgie.sh << EOF
-#!/bin/sh
-export GNOME_SHELL_SESSION_MODE=budgie-desktop
-export XDG_CURRENT_DESKTOP=Budgie:GNOME
-exec /etc/xrdp/startwm.sh
-EOF
-chmod a+x /etc/xrdp/startbudgie.sh
-fi
+#if [ ! -e /etc/xrdp/startbudgie.sh ]; then
+#cat >> /etc/xrdp/startbudgie.sh << EOF
+##!/bin/sh
+#export GNOME_SHELL_SESSION_MODE=budgie-desktop
+#export XDG_CURRENT_DESKTOP=Budgie:GNOME
+#exec /etc/xrdp/startwm.sh
+#EOF
+#chmod a+x /etc/xrdp/startbudgie.sh
+#fi
 
 # min : leave at default "startwm"
 ## use the script to setup the budgie session
