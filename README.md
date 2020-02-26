@@ -1,3 +1,7 @@
+# bah it fails to work properly.  
+# retained for reference only
+
+
 # ubuntu-19.10-vm
 
 Install and configure ```xrdp``` in Ubuntu19.10 VM for use in HYPER-V in Win10Prox64.
